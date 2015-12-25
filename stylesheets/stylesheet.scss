@@ -1,0 +1,109 @@
+@mixin blur($amt){
+  -webkit-filter: blur($amt);
+  -moz-filter: blur($amt);
+  -o-filter: blur($amt);
+  -ms-filter: blur($amt);
+  filter: blur($amt);
+}
+
+@mixin transition($property, $time){
+  -webkit-transition: $property $time;
+  -moz-transition: $property $time;
+  -o-transition: $property $time;
+  -ms-transition: $property $time;
+  transition: $property $time;
+}
+
+@mixin box-shadow($x, $y, $blur, $spread, $color){
+  -webkit-box-shadow: $x, $y, $blur, $spread, $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  -o-box-shadow: $x $y $blur $spread $color;
+  -ms-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+
+/////////////
+// Profile //
+/////////////
+
+.bg-image{
+  background-color: white;
+  background-image: url("../images/bg blur.jpg");
+  background-size: cover;
+  background-position: center;
+  // @include blur(1px);
+}
+
+.profile{
+  color: white;
+  margin: 100px 0 50px 0;
+}
+
+#profile-picture{
+  height: 200px;
+  width: 200px;
+  border: 2px white solid;
+  @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5));
+}
+
+.button-container{
+  display: inline-table;
+}
+
+form{
+  float: left;
+
+  input{
+    height: 50px;
+    width: 100px;
+    margin: 5px;
+    color: white;
+    border: 1px white solid;
+    background-color: rgba(255, 255, 255, .2);
+    @include transition(background-color, .2s);
+  }
+
+  input:hover{
+    background-color: rgba(255, 255, 255, .3);
+  }
+
+  input:focus{
+    outline: 1px white solid;
+  }
+}
+
+//////////
+// Main //
+//////////
+
+.main{
+  @include box-shadow(0, -20px, 50px, -10px, black);
+  padding: 25px 0 75px 0;
+}
+
+//////////////
+// Projects //
+//////////////
+
+.projects-container > div{
+  margin-bottom: 30px;
+}
+
+.image-container{
+  text-align: left;
+}
+
+.image-container > form > input, img{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+}
+
+////////////
+// Footer //
+////////////
+
+.footer{
+  // margin-top: 75px;
+}
