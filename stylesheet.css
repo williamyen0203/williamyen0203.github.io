@@ -1,0 +1,49 @@
+.bg-image {
+  background-color: gray;
+  background-image: url("images/bg.jpg");
+  background-position: center; }
+
+.profile {
+  text-align: center;
+  color: white; }
+
+#profile-picture {
+  height: 200px;
+  width: 200px;
+  border: 2px white solid;
+  -webkit-box-shadow: 3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.5); }
+
+.button-container {
+  display: inline-table; }
+
+form {
+  float: left; }
+  form input {
+    height: 50px;
+    width: 100px;
+    margin: 5px;
+    color: white;
+    border: 1px white solid;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+  form input:hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+  form input:focus {
+    outline: 1px white solid; }
+
+.about {
+  -webkit-box-shadow: 0, -20px, 50px, -10px, black;
+  -moz-box-shadow: 0 -20px 50px -10px black;
+  -o-box-shadow: 0 -20px 50px -10px black;
+  -ms-box-shadow: 0 -20px 50px -10px black;
+  box-shadow: 0 -20px 50px -10px black; }
+
+/*# sourceMappingURL=stylesheet.css.map */
