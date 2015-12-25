@@ -25,15 +25,17 @@
 // Profile
 
 .bg-image{
-  background-color: gray;
-  background-image: url("images/bg.jpg");
-  background-position: center;
+  background-color: white;
+  background-image: url("images/bg blur.jpg");
+  background-size: 120%;
+  // background-position: center;
   // @include blur(1px);
 }
 
 .profile{
   text-align: center;
   color: white;
+  margin: 100px 0 50px 0;
 }
 
 #profile-picture{
