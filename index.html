@@ -3,11 +3,15 @@
 <html>
 
 <head>
-  <title>William Yen</title>
+  <title>William Yen's Personal Website</title>
+  <!-- stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+  <!-- javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script type="text/javascript" src="javascript/javascript.js"></script>
 </head>
 
@@ -16,7 +20,7 @@
     <div class="container">
       <div class="profile text-center">
         <img src="images/placeholder.jpg" id="profile-picture">
-        <h1>William Yen</h1>
+        <h1></h1>
         <div class="button-container">
           <form action="https://github.com/williamyen0203">
             <input type="submit" data-text="Github" data-fa="&#xf092;" value="Github">
@@ -39,43 +43,76 @@
   <div class="main">
     <div class="container content">
       <div class="about">
-        <h2>About</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-            qui officia deserunt mollit anim id est laborum.</p>
+        <div class="row">
+          <div class="about-left col-xs-12 col-md-8">
+            <h2>About</h2>
+            <p class="about-left-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="about-right col-xs-12 col-md-4">
+            <!-- <h2>Skills</h2> -->
+            <div class="about-right-description">
+              <img src="images/icons/java-icon.png" class="icon" title="Java">
+              <img src="images/icons/html-icon.png" class="icon" title="HTML">
+              <img src="images/icons/css-icon.png" class="icon" title="CSS">
+              <img src="images/icons/javascript-icon.png" class="icon" title="Javascript">
+              <img src="images/icons/jquery-icon.png" class="icon" title="jQuery">
+              <img src="images/icons/bootstrap-icon.png" class="icon" title="Bootstrap">
+              <img src="images/icons/ruby-icon.png" class="icon" title="Ruby">
+              <img src="images/icons/rails-icon.png" class="icon" title="Ruby on Rails">
+              <img src="images/icons/android-icon.png" class="icon" title="Android Development">
+              <img src="images/icons/photoshop-icon.png" class="icon" title="Adobe Photoshop">
+              <img src="images/icons/illustrator-icon.png" class="icon" title="Adobe Illustrator">
+              <img src="images/icons/indesign-icon.png" class="icon" title="Adobe Indesign">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="projects">
         <h2>Projects</h2>
         <div class="projects-container row-fluid">
-          <div class="flip-n-check col-xs-6 col-sm-4 col-md-3">
-            <div class="image-container">
-              <img src="images/flip-n-check.png"/>
-            </div>
+
+          <div class="flip-n-check image-container col-xs-6 col-sm-4 col-md-3">
+            <img src="images/flip-n-check.png"/>
           </div>
-          <div class="neuranode col-xs-6 col-sm-4 col-md-3">
-            <div class="image-container">
-              <img src="images/neuranode.png"/>
-            </div>
-          </div>
-          <div class="sam-simulator col-xs-6 col-sm-4 col-md-3">
-            <div class="image-container">
-              <img src="images/sam-simulator.png"/>
-            </div>
-          </div>
-          <div class="contract-bridge col-xs-6 col-sm-4 col-md-3">
-            <div class="image-container">
-              <img src="images/contract-bridge.png"/>
-            </div>
-          </div>
-          <div class="website col-xs-6 col-sm-4 col-md-3">
-            <div class="image-container">
-              <img src="images/website.png"/>
-            </div>
+          <div class="expand flip-n-check-expand col-xs-12">
+            sample text
           </div>
 
+          <div class="neuranode image-container col-xs-6 col-sm-4 col-md-3">
+            <img src="images/neuranode.png"/>
+          </div>
+          <div class="expand neuranode-expand col-xs-12">
+            sample text
+          </div>
+
+          <div class="sam-simulator image-container col-xs-6 col-sm-4 col-md-3">
+            <img src="images/sam-simulator.png"/>
+          </div>
+          <div class="expand sam-simulator-expand col-xs-12">
+            sample text
+          </div>
+
+          <div class="contract-bridge image-container col-xs-6 col-sm-4 col-md-3">
+            <img src="images/contract-bridge.png"/>
+          </div>
+          <div class="expand contract-bridge-expand col-xs-12">
+            sample text
+          </div>
+
+          <div class="website image-container col-xs-6 col-sm-4 col-md-3">
+            <img src="images/website.png"/>
+          </div>
+          <div class="expand website-expand col-xs-12">
+            sample text
+          </div>
+
+<!--  -->
           <div class="flip-n-check col-xs-6 col-sm-4 col-md-3">
             <div class="image-container">
               <img src="images/flip-n-check.png"/>
@@ -101,6 +138,7 @@
               <img src="images/website.png"/>
             </div>
           </div>
+<!--  -->
 
         </div>
       </div>

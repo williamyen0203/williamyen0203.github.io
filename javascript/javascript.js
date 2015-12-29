@@ -1,6 +1,15 @@
 $(document).ready(function(){
+  $(".icon").tooltip({
+    position: {my: "center top", at: "center bottom"},
+    show: null,
+    hide: {effect: "slideUp", duration: 100},
+    open: function(event, ui){
+      ui.tooltip.animate({top: ui.tooltip.position().top + 5}, "fast");
+    }
+  });
+
   // on-hover button text change
-  $(".button-container > form > input").hover(function() {
+  $(".button-container > form > input").hover(function(){
     if ($(this).val().length > 1) {
       $(this).val($(this).data('fa'));
       $(this).css("font-family", "FontAwesome");
@@ -24,5 +33,10 @@ $(document).ready(function(){
     var y = 50 + mouseY / 100;
 
     $(".bg-image").css("background-position", x + "% " + y + "%");
+  });
+
+  // accordion
+  $(".image-container").on("click", function(){
+    console.log($(this));
   });
 });
