@@ -110,6 +110,10 @@ form{
 // Main //
 //////////
 
+body{
+  overflow-x: hidden;
+}
+
 .main{
   @include box-shadow(0, -20px, 50px, -10px, black);
   padding: 25px 0 75px 0;
@@ -124,14 +128,16 @@ form{
   width: 40px;
   margin: 10px;
   padding: 5px;
-  background-color: #fafafa;
-  // @include box-shadow-inset(0px, 0px, 10px, 0px, rgba(0, 0, 0, 0.3));
   @include box-shadow(0px, 0px, 10px, 0px, rgba(0, 0, 0, 0.3));
 }
 
 //////////////
 // Projects //
 //////////////
+
+.pointer{
+  display: none;
+}
 
 .projects-container > div{
   margin-bottom: 30px;
@@ -150,6 +156,14 @@ form{
 
 .expand{
   display: none;
+}
+
+.expand-temp{
+  padding: 50px calc(50vw - 50%);
+  background: #f1f1f1;
+  width: 100vw;
+  left: calc(-50vw + 50%);
+  @include box-shadow-inset(0px, 0px, 30px, 0px, rgba(0, 0, 0, 0.3));
 }
 
 ////////////

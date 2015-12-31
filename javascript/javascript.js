@@ -46,18 +46,37 @@ $(document).ready(function(){
     var lastElementOfRow = Math.floor(index / numCols) * numCols + numCols - 1;
     lastElementOfRow = (lastElementOfRow < numElements) ? lastElementOfRow : numElements - 1;
 
-    console.log(lastElementOfRow);
-
     if (prevIndex == index){
       console.log("same one");
     } else if (Math.floor(prevIndex / numCols) == Math.floor(index / numCols)){
       console.log("same row");
-      $(".expand-temp").remove();
-      $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow +')')).show();
+
+      $(".expand-temp").html($('#' + idName + '-expand').html());
+      var newHeight = $(".expand-temp").height();
+      console.log(newHeight);
+
+      $('.expand-temp').animate({'height': 'auto'}, 'fast', function(){
+          $('.expand-temp').height('auto');//.html($('#' + idName + '-expand').html());
+      });
+
+
+      // $(".expand-temp").slideUp("fast", function(){
+      //   $(".expand-temp").remove();
+      //   $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow +')')).slideDown().show();
+      // });
+
+      // $(".expand-temp").remove();
+      // $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow +')')).fadeIn().show();
     } else{
       console.log("diff row");
-      $(".expand-temp").remove();
-      $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow +')')).show();
+      if ($('.expand-temp').length > 0){
+        $(".expand-temp").slideUp("fast", function(){
+          $(".expand-temp").remove();
+          $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow +')')).slideDown().show();
+        });
+      } else{
+        $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow +')')).slideDown().show();
+      }
     }
 
     prevIndex = $(this).index(".image-container");
