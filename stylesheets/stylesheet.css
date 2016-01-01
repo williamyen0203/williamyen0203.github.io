@@ -87,16 +87,22 @@ html, body {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); }
 
 .pointer {
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
   position: absolute;
-  background: #ff0000;
+  background: #fbfbfb;
+  opacity: 0;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: 0px; }
+  top: 0px;
+  -webkit-box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15); }
 
 .projects-container > div {
   margin-bottom: 30px; }

@@ -4,23 +4,31 @@ var numElements;
 var pageX = $(window).width();
 var pageY = $(window).height();
 
-$(document).ready(function(){
+$(document).ready(function() {
   //////////////////
   // icon tooltip //
   //////////////////
   $('.icon').tooltip({
-    position: {my: 'center top', at: 'center bottom'},
+    position: {
+      my: 'center top',
+      at: 'center bottom'
+    },
     show: null,
-    hide: {effect: 'slideUp', duration: 100},
-    open: function(event, ui){
-      ui.tooltip.animate({top: ui.tooltip.position().top + 5}, 'fast');
+    hide: {
+      effect: 'slideUp',
+      duration: 100
+    },
+    open: function(event, ui) {
+      ui.tooltip.animate({
+        top: ui.tooltip.position().top + 5
+      }, 'fast');
     }
   });
 
   /////////////////////////////////
   // on-hover button text change //
   /////////////////////////////////
-  $('.button-container > form > input').hover(function(){
+  $('.button-container > form > input').hover(function() {
     if ($(this).val().length > 1) {
       $(this).val($(this).data('fa'));
       $(this).css('font-family', 'FontAwesome');
@@ -35,7 +43,7 @@ $(document).ready(function(){
   ////////////////////
   // mouse parallax //
   ////////////////////
-  $('html').mousemove(function(e){
+  $('html').mousemove(function(e) {
     var mouseX = e.pageX - pageX / 2;
     var mouseY = e.pageY - pageY / 2;
 
@@ -48,35 +56,41 @@ $(document).ready(function(){
   ///////////////
   // accordion //
   ///////////////
-  $('.image-container').on('click', function(){
+  $('.image-container').on('click', function() {
     var idName = $(this).attr('id');
     var index = $(this).index(".image-container");
     var lastElementOfRow = Math.floor(index / numCols) * numCols + numCols - 1;
     lastElementOfRow = (lastElementOfRow < numElements) ? lastElementOfRow : numElements - 1;
 
-    if (prevIndex == index){
-      console.log("same one");
-      $(".expand-temp").slideUp("fast", function(){
-        $(".expand-temp").remove();
-        prevIndex = -1;
-      });
-    // } else if (Math.floor(prevIndex / numCols) == Math.floor(index / numCols)){
-    //   console.log("same row");
-    //
-    //   $(".expand-temp").height(0);
-    //   $(".expand-temp").html($('#' + idName + '-expand').html());
-    //
-    //   $('.expand-temp').animate({'height': $('.expand-temp').get(0).scrollHeight}, 'fast');
-    //   $('.expand-temp').height($('.expand-temp').height() + 50);
-    } else{
-      console.log("diff row");
-      if ($('.expand-temp').length > 0){
-        $(".expand-temp").slideUp("fast", function(){
+    if (prevIndex == index) { // same one
+      animatePointerDown(function() {
+        $(".expand-temp").slideUp("fast", function() {
           $(".expand-temp").remove();
-          $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow +')')).slideDown().show();
+          prevIndex = -1;
         });
-      } else{
-        $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow +')')).slideDown().show();
+      });
+      // } else if (Math.floor(prevIndex / numCols) == Math.floor(index / numCols)){
+      //   console.log("same row");
+      //
+      //   $(".expand-temp").height(0);
+      //   $(".expand-temp").html($('#' + idName + '-expand').html());
+      //
+      //   $('.expand-temp').animate({'height': $('.expand-temp').get(0).scrollHeight}, 'fast');
+      //   $('.expand-temp').height($('.expand-temp').height() + 50);
+    } else { // different one
+      if ($('.expand-temp').length > 0) {
+        animatePointerDown(function() {
+          $(".expand-temp").slideUp("fast", function() {
+            $(".expand-temp").remove();
+            $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow + ')')).slideDown('fast', function() {
+              animatePointerUp();
+            }).show();
+          });
+        });
+      } else {
+        $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow + ')')).slideDown('fast', function() {
+          animatePointerUp();
+        }).show();
       }
     }
 
@@ -91,26 +105,39 @@ $(document).ready(function(){
 ///////////////
 // on resize //
 ///////////////
-$(window).on('resize orientationChange', function(){
+$(window).on('resize orientationChange', function() {
   positionPointer();
-  $(".expand-temp").slideUp("fast", function(){
+  $(".expand-temp").slideUp("fast", function() {
     $(".expand-temp").remove();
   });
 });
 
-function positionPointer(){
+function positionPointer() {
   numCols = ($(window).width() < 768) ? 2 : ($(window).width() < 992) ? 3 : 4;
   numElements = $('.image-container').length;
   var offset = $('.projects-container').width() / numCols;
 
-  $('.pointer').each(function(index){
+  $('.pointer').each(function(index) {
     $(this).css('left', (offset * (index % numCols)) + (offset / 2) - ($('.pointer').width() / 2) + 'px');
-
-    var diagonalHeight = getDiagonal($(this).height());
-    $(this).css('top', (getDiagonal($(this).height()) - $(this).height() / 2) - (($('.image-container').css('margin-bottom')).replace('px', '') * 0.75) + 'px');
+    $(this).css('top', (getDiagonal($(this).height()) - $(this).height() / 2));
+    // $(this).css('top', (getDiagonal($(this).height()) - $(this).height() / 2) - (($('.image-container').css('margin-bottom')).replace('px', '') * 0.75) + 'px');
   });
 }
 
-function getDiagonal(side){
+function animatePointerUp() {
+  $('.pointer').animate({
+    opacity: 1,
+    'top': (getDiagonal($('.pointer').height()) - $('.pointer').height() / 2) - (($('.image-container').css('margin-bottom')).replace('px', '') * 0.75) + 'px'
+  }, 'fast');
+}
+
+function animatePointerDown(func) {
+  $('.pointer').animate({
+    opacity: 0,
+    top: (getDiagonal($('.pointer').height()) - $('.pointer').height() / 2)
+  }, 'fast', func);
+}
+
+function getDiagonal(side) {
   return (Math.sqrt(2 * side * side)) / 2;
 }

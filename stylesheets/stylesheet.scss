@@ -145,13 +145,15 @@ html, body{
 //////////////
 
 .pointer{
-  // display: none;
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
   position: absolute;
-  background: #ff0000;
+  background: #fbfbfb;
+  opacity: 0;
   @include rotate(45deg);
   top: 0px;
+  @include box-shadow-inset(30px, 30px, 30px, -30px, rgba(0, 0, 0, 0.15));
+  // z-index: -1;
 }
 
 .projects-container > div{
