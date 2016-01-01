@@ -63,8 +63,9 @@ form {
 .ui-corner-tl {
   border-radius: 0px; }
 
-body {
-  overflow-x: hidden; }
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important; }
 
 .main {
   -webkit-box-shadow: 0 -20px 50px -10px black;
@@ -86,7 +87,16 @@ body {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); }
 
 .pointer {
-  display: none; }
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  background: #ff0000;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0px; }
 
 .projects-container > div {
   margin-bottom: 30px; }
@@ -104,14 +114,12 @@ body {
   display: none; }
 
 .expand-temp {
-  padding: 50px calc(50vw - 50%);
-  background: #f1f1f1;
-  width: 100vw;
-  left: calc(-50vw + 50%);
-  -webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-  -o-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-  -ms-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.3); }
+  padding: 50px 20px;
+  background: #fbfbfb;
+  -webkit-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15); }
 
 /*# sourceMappingURL=stylesheet.css.map */
