@@ -6,6 +6,12 @@ var pageY = $(window).height();
 
 $(document).ready(function() {
 
+  $('input').click(function(){
+    $('html, body').animate({
+      scrollTop: $('#scroll-' + $(this).data('text').toLowerCase()).offset().top
+    }, 'fast');
+  });
+
   //////////////////
   // icon tooltip //
   //////////////////
