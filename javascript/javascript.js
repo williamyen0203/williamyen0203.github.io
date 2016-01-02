@@ -5,25 +5,11 @@ var pageX = $(window).width();
 var pageY = $(window).height();
 
 $(document).ready(function() {
+
   //////////////////
   // icon tooltip //
   //////////////////
-  $('.icon').tooltip({
-    position: {
-      my: 'center top',
-      at: 'center bottom'
-    },
-    show: null,
-    hide: {
-      effect: 'slideUp',
-      duration: 100
-    },
-    open: function(event, ui) {
-      ui.tooltip.animate({
-        top: ui.tooltip.position().top + 5
-      }, 'fast');
-    }
-  });
+  tooltip();
 
   /////////////////////////////////
   // on-hover button text change //
@@ -58,44 +44,46 @@ $(document).ready(function() {
   ///////////////
   $('.image-container').on('click', function() {
     var idName = $(this).attr('id');
-    var index = $(this).index(".image-container");
+    var index = $(this).index('.image-container');
     var lastElementOfRow = Math.floor(index / numCols) * numCols + numCols - 1;
     lastElementOfRow = (lastElementOfRow < numElements) ? lastElementOfRow : numElements - 1;
 
     if (prevIndex == index) { // same one
       animatePointerDown(function() {
-        $(".expand-temp").slideUp("fast", function() {
-          $(".expand-temp").remove();
+        $('.expand-temp').slideUp('fast', function() {
+          $('.expand-temp').remove();
           prevIndex = -1;
         });
       });
       // } else if (Math.floor(prevIndex / numCols) == Math.floor(index / numCols)){
-      //   console.log("same row");
+      //   console.log('same row');
       //
-      //   $(".expand-temp").height(0);
-      //   $(".expand-temp").html($('#' + idName + '-expand').html());
+      //   $('.expand-temp').height(0);
+      //   $('.expand-temp').html($('#' + idName + '-expand').html());
       //
       //   $('.expand-temp').animate({'height': $('.expand-temp').get(0).scrollHeight}, 'fast');
       //   $('.expand-temp').height($('.expand-temp').height() + 50);
     } else { // different one
       if ($('.expand-temp').length > 0) {
         animatePointerDown(function() {
-          $(".expand-temp").slideUp("fast", function() {
-            $(".expand-temp").remove();
+          $('.expand-temp').slideUp('fast', function() {
+            $('.expand-temp').remove();
             $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow + ')')).slideDown('fast', function() {
               animatePointerUp();
+              tooltip();
             }).show();
           });
         });
       } else {
         $('#' + idName + '-expand').clone().addClass('expand-temp').insertAfter($('.projects-container div.image-container:eq(' + lastElementOfRow + ')')).slideDown('fast', function() {
           animatePointerUp();
+          tooltip();
         }).show();
       }
     }
-
-    prevIndex = $(this).index(".image-container");
+    prevIndex = $(this).index('.image-container');
   });
+
   ////////////////////////////////////
   // initial positioning of pointer //
   ////////////////////////////////////
@@ -107,10 +95,30 @@ $(document).ready(function() {
 ///////////////
 $(window).on('resize orientationChange', function() {
   positionPointer();
-  $(".expand-temp").slideUp("fast", function() {
-    $(".expand-temp").remove();
+  $('.expand-temp').slideUp('fast', function() {
+    $('.expand-temp').remove();
   });
+  prevIndex = -1;
 });
+
+function tooltip() {
+  $('.icon').tooltip({
+    position: {
+      my: 'center top',
+      at: 'center bottom'
+    },
+    show: null,
+    hide: {
+      effect: 'slideUp',
+      duration: 100
+    },
+    open: function(event, ui) {
+      ui.tooltip.animate({
+        top: ui.tooltip.position().top + 5
+      }, 'fast');
+    }
+  });
+}
 
 function positionPointer() {
   numCols = ($(window).width() < 768) ? 2 : ($(window).width() < 992) ? 3 : 4;
