@@ -240,8 +240,9 @@ $red: rgb(217, 83, 79);
     width: 100%;
     height: 50px;
     color: white;
-    background: $green;
+    background-color: $green;
     border: 1px darken($green, 5%) solid;
+    @include transition(background-color, .2s);
     @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5));
 
     &:hover{
