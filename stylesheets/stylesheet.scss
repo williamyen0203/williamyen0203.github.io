@@ -91,25 +91,26 @@
   display: inline-table;
 }
 
-form{
+.profile-button{
   float: left;
 
   input{
-    height: 50px;
     width: 100px;
-    margin: 5px;
+    height: 50px;
     color: white;
-    border: 1px white solid;
     background-color: rgba(255, 255, 255, .2);
+    margin: 5px;
+    border: 1px white solid;
     @include transition(background-color, .2s);
-  }
+    @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5));
 
-  input:hover{
-    background-color: rgba(255, 255, 255, .3);
-  }
+    &:hover{
+      background-color: rgba(255, 255, 255, .3);
+    }
 
-  input:focus{
-    outline: 1px white solid;
+    &:focus{
+      outline: 1px white solid;
+    }
   }
 }
 
@@ -133,6 +134,14 @@ form{
   border-radius: 0px;
 }
 
+////////////////////////
+// Bootstrap override //
+////////////////////////
+
+.well{
+  border-radius: 0;
+}
+
 //////////
 // main //
 //////////
@@ -143,7 +152,7 @@ form{
 // }
 
 .main{
-  @include box-shadow(0, -20px, 50px, -10px, black);
+  @include box-shadow(0, -20px, 40px, -10px, black);
   // @include box-shadow(0, 0, 50px, 0, black);
   padding: 25px 0 75px 0;
 }
@@ -186,8 +195,8 @@ form{
 /////////////////////
 
 .pointer{
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
   position: absolute;
   background: #fbfbfb;
   opacity: 0;
@@ -210,7 +219,7 @@ form{
   @include box-shadow-inset(0px, 0px, 30px, 0px, rgba(0, 0, 0, 0.15));
 }
 
-.project-image img{
+.project-image img, .image-container img{
   width: 100%;
   height: 100%;
   @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5));
@@ -218,6 +227,31 @@ form{
 
 .project-title{
   margin-top: 0;
+}
+
+$green: rgb(92, 184, 92);
+$blue: rgb(51, 122, 183);
+$red: rgb(217, 83, 79);
+
+.project-button{
+  margin: 20px 0;
+
+  input{
+    width: 100%;
+    height: 50px;
+    color: white;
+    background: $green;
+    border: 1px darken($green, 5%) solid;
+    @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5));
+
+    &:hover{
+      background-color: darken($green, 5%);;
+    }
+
+    &:focus{
+      outline: 1px darken($green, 5%) solid;
+    }
+  }
 }
 
 ////////////
