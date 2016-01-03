@@ -6,6 +6,9 @@ var pageY = $(window).height();
 
 $(document).ready(function() {
 
+  ////////////////////
+  // scroll on page //
+  ////////////////////
   $('input').click(function(){
     $('html, body').animate({
       scrollTop: $('#scroll-' + $(this).data('text').toLowerCase()).offset().top
@@ -141,7 +144,7 @@ function positionPointer() {
 function animatePointerUp() {
   $('.pointer').animate({
     opacity: 1,
-    'top': (getDiagonal($('.pointer').height()) - $('.pointer').height() / 2) - (($('.image-container').css('margin-bottom')).replace('px', '') * 0.75) + 'px'
+    'top': (getDiagonal($('.pointer').height()) - $('.pointer').height() / 2) - (($('.image-container').css('margin-bottom')).replace('px', '') * 0.5) + 'px'
   }, 'fast');
 }
 
