@@ -23,7 +23,7 @@ $(document).ready(function() {
   /////////////////////////////////
   // on-hover button text change //
   /////////////////////////////////
-  $('.button-container > form > input').hover(function() {
+  $('.button-container input').hover(function() {
     if ($(this).val().length > 1) {
       $(this).val($(this).data('fa'));
       $(this).css('font-family', 'FontAwesome');
