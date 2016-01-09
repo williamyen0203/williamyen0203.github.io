@@ -91,6 +91,20 @@ $(document).ready(function() {
       }
     }
     prevIndex = $(this).index('.image-container');
+
+    ///////////////
+    // slideshow //
+    ///////////////
+
+    // $('.slideshow img:gt(0)').hide();
+    // setInterval(function() {
+    //   $('.slideshow :first-child')
+    //     .fadeOut(1000)
+    //     .next()
+    //     .fadeIn(1000)
+    //     .end()
+    //     .appendTo('.slideshow');
+    // },  3000);
   });
 
   ////////////////////////////////////
@@ -137,7 +151,6 @@ function positionPointer() {
   $('.pointer').each(function(index) {
     $(this).css('left', (offset * (index % numCols)) + (offset / 2) - ($('.pointer').width() / 2) + 'px');
     $(this).css('top', (getDiagonal($(this).height()) - $(this).height() / 2));
-    // $(this).css('top', (getDiagonal($(this).height()) - $(this).height() / 2) - (($('.image-container').css('margin-bottom')).replace('px', '') * 0.75) + 'px');
   });
 }
 

@@ -10,6 +10,7 @@
   <!-- javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="javascript/jquery.slides.min.js"></script>
   <script type="text/javascript" src="javascript/javascript.js"></script>
 </head>
 
@@ -17,7 +18,7 @@
   <div class="intro bg-image">
     <div class="container">
       <div class="profile text-center">
-        <img src="images/placeholder.jpg" id="profile-picture">
+        <img src="images/site/placeholder.jpg" id="profile-picture">
         <h1>William Yen</h1>
         <div class="button-container">
           <form action="https://github.com/williamyen0203" class="profile-button">
@@ -46,12 +47,23 @@
           <div class="about-left col-xs-12 col-md-8">
             <h1>About</h1>
             <p class="about-left-description">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              My name is William Yen and I am a sophomore majoring in Computer Science
+              and Applied Mathematics and Statistics at Stony Brook University.
+              I love programming, graphic design, and drawing. I love to learn and
+              to see the things that I make come to life.
+              <br><br>
+              I've been fascinated with computers ever since I was a kid and being
+              able to understand what's going on in the code behind the scenes and
+              learning to do it myself is what drives my interest.
+              <br><br>
+              Take a look at projects that I have been a part of and some of the
+              work that I have done!
+              <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-              qui officia deserunt mollit anim id est laborum.
+              qui officia deserunt mollit anim id est laborum. -->
             </p>
           </div>
           <div class="about-right col-xs-12 col-md-4">
@@ -76,31 +88,36 @@
         <div class="projects-container row-fluid">
 
           <div id="flip-n-check" class="image-container col-xs-6 col-sm-4 col-md-3">
-            <img src="images/flip-n-check.png"/>
+            <img src="images/flip-n-check/flip-n-check.png"/>
           </div>
           <div class="expand col-xs-12 row" id="flip-n-check-expand">
             <div class="pointer"></div>
-            <div class="col-xs-4 col-sm-3 project-image">
-              <img src="images/flip-n-check.png">
+            <div class="col-xs-12 col-sm-4 col-md-3 project-image">
+              <div class="slideshow">
+                <img src="images/flip-n-check/product.png">
+                <!-- <img src="images/flip-n-check/puzzles.png"> -->
+              </div>
               <form action="http://www.flipncheck.com/" class="project-button">
-                <input type="submit" data-fa="&#xf092;" value="More">
+                <input type="submit" data-fa="&#xf092;" value="Visit the site">
               </form>
             </div>
-            <div class="col-xs-8 col-sm-9 project-info">
+            <div class="col-xs-12 col-sm-8 col-md-9 project-info">
               <h1 class="project-title">Flip 'N' Check</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-                flip-n-check Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
+                Flip 'N' Check is a dry erase activity book for children developed
+                as part of the Teen Entrepreneur Bootcamp program. The program is
+                designed to teach students about entrepreneurship, the process
+                of bringing a product into the market, and product development.
+                <br><br>
+                Our team was given this product by
+                <a href="http://www.howardwexlertoys.com/">Dr. Howard Wexler</a>,
+                inventor of Connect 4, and we have brought the original Flip 'N' Check
+                as well as the Mad Libs expansion to market under the supervision of Pam Chmiel.
+                <a href="http://www.flipncheck.com/about-1.html">Click here to learn more.</a>
+                <br><br>
+                I was tasked with illustrating puzzles for the new Mad Libs expansion,
+                Mad Libs edition cover design, website design, and promotional material,
+                and posters.
               </p>
               <div class=" project-icons">
                 <div class="well well-sm">
@@ -116,31 +133,23 @@
           </div>
 
           <div id="neuranode" class="image-container col-xs-6 col-sm-4 col-md-3">
-            <img src="images/neuranode.png"/>
+            <img src="images/neuranode/neuranode.png"/>
           </div>
           <div class="expand col-xs-12" id="neuranode-expand">
             <div class="pointer"></div>
-            <div class="col-xs-4 col-sm-3 project-image">
-              <img src="images/neuranode.png">
+            <div class="col-xs-12 col-sm-4 col-md-3 project-image">
+              <img src="images/neuranode/neuranode.png">
               <form action="http://www.neuranode.x10host.com/" class="project-button">
                 <input type="submit" data-fa="&#xf092;" value="More">
               </form>
             </div>
-            <div class="col-xs-8 col-sm-9 project-info">
+            <div class="col-xs-12 col-sm-8 col-md-9 project-info">
               <h1 class="project-title">Neuranode</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
-                flip-n-check Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est laborum.
+                Neuranode is a ...
+
+                <br><br>
+                More info coming soon.
               </p>
               <div class="project-icons">
                 <div class="well well-sm">
@@ -157,17 +166,17 @@
           </div>
 
           <div id="sam-simulator" class="image-container col-xs-6 col-sm-4 col-md-3">
-            <img src="images/sam-simulator.png"/>
+            <img src="images/sam-simulator/sam-simulator.png"/>
           </div>
           <div class="expand col-xs-12" id="sam-simulator-expand">
             <div class="pointer"></div>
-            <div class="col-xs-4 col-sm-3 project-image">
-              <img src="images/sam-simulator.png">
+            <div class="col-xs-12 col-sm-4 col-md-3 project-image">
+              <img src="images/sam-simulator/sam-simulator.png">
               <form action="http://sam-simulator.herokuapp.com/" class="project-button">
                 <input type="submit" data-fa="&#xf092;" value="More">
               </form>
             </div>
-            <div class="col-xs-8 col-sm-9 project-info">
+            <div class="col-xs-12 col-sm-8 col-md-9 project-info">
               <h1 class="project-title">Sam Simulator</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -199,17 +208,17 @@
           </div>
 
           <div id="contract-bridge" class="image-container col-xs-6 col-sm-4 col-md-3">
-            <img src="images/contract-bridge.png"/>
+            <img src="images/contract-bridge/contract-bridge.png"/>
           </div>
           <div class="expand col-xs-12" id="contract-bridge-expand">
             <div class="pointer"></div>
-            <div class="col-xs-4 col-sm-3 project-image">
-              <img src="images/contract-bridge.png">
+            <div class="col-xs-12 col-sm-4 col-md-3 project-image">
+              <img src="images/contract-bridge/contract-bridge.png">
               <form action="https://github.com/williamyen0203/contract-bridge" class="project-button">
                 <input type="submit" data-fa="&#xf092;" value="More">
               </form>
             </div>
-            <div class="col-xs-8 col-sm-9 project-info">
+            <div class="col-xs-12 col-sm-8 col-md-9 project-info">
               <h1 class="project-title">Contract Bridge</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -236,17 +245,17 @@
           </div>
 
           <div id="website" class="image-container col-xs-6 col-sm-4 col-md-3">
-            <img src="images/website.png"/>
+            <img src="images/website/website.png"/>
           </div>
           <div class="expand col-xs-12" id="website-expand">
             <div class="pointer"></div>
-            <div class="col-xs-4 col-sm-3 project-image">
-              <img src="images/website.png">
+            <div class="col-xs-12 col-sm-4 col-md-3 project-image">
+              <img src="images/website/website.png">
               <form action="http://williamyen0203.github.io/" class="project-button">
                 <input type="submit" data-fa="&#xf092;" value="More">
               </form>
             </div>
-            <div class="col-xs-8 col-sm-9 project-info">
+            <div class="col-xs-12 col-sm-8 col-md-9 project-info">
               <h1 class="project-title">Personal Website</h1>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -307,17 +316,6 @@
         fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
         qui officia deserunt mollit anim id est laborum.</p>
       </div> -->
-
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- Footer Ad -->
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:728px;height:90px"
-           data-ad-client="ca-pub-1034021140051715"
-           data-ad-slot="2753984381"></ins>
-      <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-
   </div>
 </body>
 </html>
