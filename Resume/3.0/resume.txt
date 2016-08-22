@@ -1,0 +1,66 @@
+William Yen
+ 
+email: williamyen0203@gmail.com
+website: williamyen0203@gmail.com
+phone: (917) 815-0380
+github: github.com/williamyen0203
+
+Education
+=========
+• Stony Brook University	Stony Brook, NY
+Expected 2018
+B.S. in Computer Science & Applied Mathematics and Statistics
+GPA: 3.84/4.0
+Relevant Coursework:
+- Object Oriented Programming		CSE 114
+- Data Structures and Algorithms	CSE 214
+- Fundamentals of Computer Science	CSE 215 
+- Computer Science III			CSE 219 
+- Systems Level Programming		CSE 220 
+- Computer Communications		CSE 346
+- Analysis of Algorithms		CSE 373
+- Technical Writing			CSE 300
+- Theory of Computation			CSE 303
+- Programming Languages			CSE 307
+- Ethics				CSE 312
+
+• Stuyvesant High School	New York, NY
+2010 - 2014
+GPA: 3.7/4.0
+
+Programming Languages & Technologies
+JavaScript, HTML, CSS, Bootstrap, Ruby, Ruby on Rails, Angular, Java, Photoshop, Illustrator, C#, .NET Framework, Android, Git
+
+Experience
+=========
+• Teen Entrepreneur Boot Camp	Feb 2012 – Aug 2015
+- Developed and brought to market “Flip ‘N’ Check”, a dry-erase activity book for children sold in over 100 stores across the U.S.
+- Created marketing and promotional material. (posters, graphics, product stands, etc.)
+- Created and edited over 40+ puzzles for two expansion packs.
+- Designed product website and book covers.
+
+• Teen Entrepreneur Boot Camp	June 2016 – Present
+- Created a responsive Web Document Viewer to display files in a browser without the need for external software or plugins.
+- Built a Tagline Generator in AngularJS that generates a document with taglines in different languages that is attached to all Summary of Benefits and Coverage documents.
+- Created an upload portal for carriers to upload XML files that automatically validates, logs, and uploads files to Softheon’s servers.
+- Worked as a group of 5 to create an internal social network using Softheon’s internal database interface, Softheon Web, for recognizing achievements within the company and giving praise to employees.
+- Created a project manager for employees to keep track of tasks, as well as to give department heads an overview of ongoing projects and to help them keep track of what everyone is working on.
+
+
+Projects
+=========
+• Personal Website			www.williamyen0203.github.io
+Built a responsive personal website from scratch using HTML, CSS, JavaScript, jQuery, and Twitter Bootstrap for grids.
+See more of my projects here!
+• JClass Designer	
+Built a UML diagram creator that automatically establishes connections (association, aggregation, inheritance).
+Ability to export UML diagram as an image or as Java source code that can be compiled.
+• Neuranode / Neuranode Android App	www.neuranode.x10host.com
+- Worked in a team of 4 to create a web app that analyzes and provides a visual representation of the user’s personality based on the Myers Briggs personality test.
+- Created a website using HTML, CSS, Javascript, and Wordpress.
+- Created an Android application using Java and SQLite databases.
+• Sam Simulator				www.sam-simulator.herokuapp.com
+- Designed a web app using HTML, CSS, Javascript, and jQuery for the front end.
+- Used Ruby, Ruby on Rails, and SQLite for the back end.
+- Hosted the web app on Heroku using a PostgreSQL database.
+
