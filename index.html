@@ -1,492 +1,134 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>William Yen</title>
-  <!-- stylesheets -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
-  <!-- javascript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="javascript/javascript.js"></script>
+    <title>William Yen</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="javascript/website-app.js"></script>
+    <script type="text/javascript" src="javascript/javascript.js"></script>
 </head>
 
-<body>
-  <div class="intro bg-image">
-    <div class="container">
-      <div class="profile text-center">
-        <img src="images/site/placeholder.jpg" id="profile-picture">
-        <h1>William Yen</h1>
-        <div class="button-container">
-          <form action="https://github.com/williamyen0203" class="profile-button">
-            <input type="submit" data-text="Github" data-fa="&#xf092;" value="Github">
-          </form>
-          <form action="javascript:void(0);" class="profile-button">
-            <input type="submit" data-text="About" data-fa="&#xf05a;" value="About">
-          </form>
-          <form action="javascript:void(0);" class="profile-button">
-            <input type="submit" data-text="Projects" data-fa="&#xf085;" value="Projects">
-          </form>
-          <form action="javascript:void(0);" class="profile-button">
-            <input type="submit" data-text="Contact" data-fa="&#xf0e0;" value="Contact">
-          </form>
-          <form action="/Resume/3.0/resume.pdf" class="profile-button">
-            <input type="submit" data-text="Resume" data-fa="&#xf02d;" value="Resume">
-          </form>
+<body ng-app="website-app" ng-controller="website-ctrl">
+    <div class="bg-image">
+        <div class="container">
+            <div class="profile text-center">
+                <img class="shadow" src="images/site/me.jpg" id="profile-picture">
+                <h1>William Yen</h1>
+                <div class="button-container">
+                    <form action="https://github.com/williamyen0203" class="profile-button">
+                        <input type="submit" data-text="Github" data-fa="&#xf092;" value="Github">
+                    </form>
+                    <form action="javascript:void(0);" class="profile-button">
+                        <input type="submit" data-text="About" data-fa="&#xf05a;" value="About">
+                    </form>
+                    <form action="javascript:void(0);" class="profile-button">
+                        <input type="submit" data-text="Projects" data-fa="&#xf085;" value="Projects">
+                    </form>
+                    <form action="javascript:void(0);" class="profile-button">
+                        <input type="submit" data-text="Contact" data-fa="&#xf0e0;" value="Contact">
+                    </form>
+                    <form action="Resume/3.0/resume.pdf" class="profile-button">
+                        <input type="submit" data-text="Resume" data-fa="&#xf02d;" value="Resume">
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="main" id="scroll-about">
-    <div class="container content">
-      <div class="about">
-        <div class="row">
-          <div class="about-left col-xs-12 col-md-8">
-            <h1>About</h1>
-            <p class="about-left-description">
-              My name is William Yen and I am a sophomore majoring in Computer Science
-              and Applied Mathematics and Statistics at Stony Brook University.
-              I enjoy programming, graphic design, web design, and drawing. I
-              love to learn and to see the things that I make come to life.
-              <br><br>
-              I've been fascinated with computers ever since I was a kid and being
-              able to understand what's going on in the code behind the scenes and
-              learning to do it myself is what drives my interest.
-              <br><br>
-              Take a look at projects that I have been a part of and some of the
-              work that I have done!
-            </p>
-          </div>
-          <div class="about-right col-xs-12 col-md-4">
-            <img src="images/icons/java-icon.png" class="icon" title="Java">
-            <img src="images/icons/html-icon.png" class="icon" title="HTML">
-            <img src="images/icons/css-icon.png" class="icon" title="CSS">
-            <img src="images/icons/javascript-icon.png" class="icon" title="Javascript">
-            <img src="images/icons/jquery-icon.png" class="icon" title="jQuery">
-            <img src="images/icons/bootstrap-icon.png" class="icon" title="Bootstrap">
-            <img src="images/icons/ruby-icon.png" class="icon" title="Ruby">
-            <img src="images/icons/rails-icon.png" class="icon" title="Ruby on Rails">
-            <img src="images/icons/android-icon.png" class="icon" title="Android Development">
-            <img src="images/icons/photoshop-icon.png" class="icon" title="Adobe Photoshop">
-            <img src="images/icons/illustrator-icon.png" class="icon" title="Adobe Illustrator">
-            <img src="images/icons/indesign-icon.png" class="icon" title="Adobe Indesign">
-          </div>
+
+    <div class="main">
+        <div class="container content">
+
+			<!-- about -->
+            <div id="scroll-about">
+                <h1><i class="fa fa-user"></i> About</h1>
+                <hr>
+				<div class="row">
+	                <div class="col-xs-12 col-md-8">
+	                    <p>
+	                        My name is William Yen and I am a junior majoring in Computer Science, specializaing in Systems Software Development, and Applied Mathematics and Statistics at Stony Brook University. I enjoy programming, graphic design, web design, and drawing. I love
+	                        to learn and to see the things that I make come to life.
+	                        <br>
+	                        <br> I've been fascinated with computers ever since I was a kid and being able to understand what's going on in the code behind the scenes and learning to do it myself is what drives my interest.
+	                        <br>
+	                        <br> Take a look at projects that I have been a part of and some of the work that I have done!
+	                    </p>
+	                </div>
+	                <div class="col-xs-12 col-md-4 well well-sm">
+	                    <skill ng-repeat="(key, value) in skills" skill="skills[key]"></skill>
+	                </div>
+				</div>
+            </div>
+
+			<!-- projects -->
+            <div id="scroll-projects">
+                <h1><i class="fa fa-flask"></i> Projects</h1>
+                <hr>
+                <div class="row">
+                    <div class="projects-container row-fluid">
+
+                        <div class="project" ng-repeat="project in projects">
+                            <div id="{{project.id}}" class="image-container pad-bot-heavy col-xs-6 col-sm-4 col-md-3">
+                                <img class="full-size-image shadow" ng-src="{{project.image}}" />
+                            </div>
+
+                            <!-- expand -->
+                            <div class="expand col-xs-12 pad-bot-med" id="{{project.id}}-expand">
+                                <div class="pointer"></div>
+                                <div class="col-xs-12 col-sm-4 col-md-3 project-image">
+                                    <img class="full-size-image shadow" ng-src="{{project.imageMore}}">
+                                    <a ng-show="project.link != null || project.click != null" ng-href="{{project.link}}" ng-click="project.click()" class="btn btn-success btn-block shadow pad-top-med">View More</a>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-8 col-md-9 project-info">
+                                    <h1 style="margin-top: 0;">{{project.name}}</h1>
+                                    <p ng-bind-html="project.description"></p>
+
+                                    <div class="pad-top-heavy" ng-show="project.skills.length > 0">
+                                        <div class="well well-sm pad-bot-none">
+                                            Made with:
+                                            <skill ng-repeat="skill in project.skills" skill="skills[skill]"></skill>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+			</div>
+
+			<!-- contact -->
+            <div id="scroll-contact">
+                <h1><i class="fa fa-book"></i> Contact</h1>
+				<hr>
+				<div class="row">
+					<div class="col-xs-12 col-md-4 pad-top-light">
+						<a href="mailto:williamyen0203@gmail.com" class="btn btn-primary btn-block">
+							<h4><i class="fa fa-envelope"></i> Email</h4>
+						</a>
+					</div>
+					<div class="col-xs-12 col-md-4 pad-top-light">
+						<a href="https://github.com/williamyen0203" class="btn btn-primary btn-block">
+							<h4><i class="fa fa-github"></i> Github</h4>
+						</a>
+					</div>
+					<div class="col-xs-12 col-md-4 pad-top-light">
+						<a href="https://www.linkedin.com/in/william-yen-45186a100" class="btn btn-primary btn-block">
+							<h4><i class="fa fa-linkedin-square"></i> Linkedin</h4>
+						</a>
+					</div>
+				</div>
+            </div>
         </div>
-      </div>
-      <div class="projects" id="scroll-projects">
-        <h1>Projects</h1>
-        <div class="row">
-          <div class="projects-container row-fluid">
-
-            <div id="flip-n-check" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/flip-n-check/flip-n-check.png"/>
-            </div>
-            <div class="expand col-xs-12 row" id="flip-n-check-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <div class="slideshow">
-                  <img src="images/flip-n-check/more.png">
-                  <!-- <img src="images/flip-n-check/puzzles.png"> -->
-                </div>
-                <form action="http://www.flipncheck.com/" class="project-button">
-                  <input type="submit" value="Visit the site">
-                </form>
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Flip 'N' Check</h1>
-                <p>
-                  Flip 'N' Check is a dry erase activity book for children developed
-                  as part of the Teen Entrepreneur Bootcamp program. The program is
-                  designed to teach students about entrepreneurship, the process
-                  of bringing a product into the market, and product development.
-                  <br><br>
-                  Our team was given this product by
-                  <a href="http://www.howardwexlertoys.com/">Dr. Howard Wexler</a>,
-                  inventor of Connect 4, and we have brought the original Flip 'N' Check
-                  as well as the Mad Libs expansion to market under the supervision of Pam Chmiel.
-                  <a href="http://www.flipncheck.com/about-1.html">Click here to learn more.</a>
-                  <br><br>
-                  I was tasked with illustrating puzzles for the new Mad Libs expansion,
-                  Mad Libs edition cover design, website design, and promotional material,
-                  and posters.
-                </p>
-                <div class=" project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/html-icon.png" class="icon" title="HTML">
-                    <img src="images/icons/css-icon.png" class="icon" title="CSS">
-                    <img src="images/icons/photoshop-icon.png" class="icon" title="Adobe Photoshop">
-                    <img src="images/icons/illustrator-icon.png" class="icon" title="Adobe Illustrator">
-                    <img src="images/icons/indesign-icon.png" class="icon" title="Adobe Indesign">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="neuranode" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/neuranode/neuranode.png"/>
-            </div>
-            <div class="expand col-xs-12" id="neuranode-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <img src="images/neuranode/more.png">
-                <form action="http://www.neuranode.x10host.com/" class="project-button">
-                  <input type="submit" value="Visit the site">
-                </form>
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Neuranode</h1>
-                <p>
-                  <h4>Coming soon!</h4>
-                  The Neuranode website is a landing page to introduce users
-                  to the Neuranode app, show planned features, and link the user
-                  to the app download.
-                  <br><br>
-                  More info coming soon!
-                </p>
-                <div class="project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/html-icon.png" class="icon" title="HTML">
-                    <img src="images/icons/css-icon.png" class="icon" title="CSS">
-                    <img src="images/icons/javascript-icon.png" class="icon" title="Javascript">
-                    <img src="images/icons/jquery-icon.png" class="icon" title="jQuery">
-                    <img src="images/icons/photoshop-icon.png" class="icon" title="Adobe Photoshop">
-                    <img src="images/icons/indesign-icon.png" class="icon" title="Adobe Indesign">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="neuranode-app" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/neuranode-app/neuranode-app.png"/>
-            </div>
-            <div class="expand col-xs-12" id="neuranode-app-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <img src="images/neuranode-app/more.png">
-                <form action="#" class="project-button">
-                  <input type="submit" value="Coming soon">
-                </form>
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Neuranode App</h1>
-                <p>
-                  <h4>Coming soon!</h4>
-                  Neuranode is an Android application that takes in a user's quiz answers,
-                  analyzes it, and provides a visual representation of the user's
-                  personality based on the Myers Briggs personality test. This
-                  project is a collaboration with Daniel Guan, George Bekheet,
-                  and Orsen Cheng (Northeastern University).
-                  <br><br>
-                  <h5>Planned features:</h5>
-                  - Social networking with other users
-                  <br>
-                  - Tracking your changes over time
-                  <br><br>
-                  More info coming soon!
-                </p>
-                <div class="project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/java-icon.png" class="icon" title="Java">
-                    <img src="images/icons/photoshop-icon.png" class="icon" title="Adobe Photoshop">
-                    <img src="images/icons/android-icon.png" class="icon" title="Android Development">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="sam-simulator" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/sam-simulator/sam-simulator.png"/>
-            </div>
-            <div class="expand col-xs-12" id="sam-simulator-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <img src="images/sam-simulator/more.png">
-                <form action="http://sam-simulator.herokuapp.com/" class="project-button">
-                  <input type="submit" value="Try out the app">
-                </form>
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Sam Simulator</h1>
-                <p>
-                  Sam Simulator is a web application built with Ruby on Rails and
-                  dedicated to my friend, Sam Chen. This was made to experiment
-                  with Ruby, Ruby on Rails, and CSS/jQuery animations.
-                  <br><br>
-                  Sam Simulator uses a SQLite database to store foods and values
-                  locally but uses a PostgreSQL database when hosted on Heroku.
-                  <br><br>
-                  No harm intended.
-                </p>
-                <div class="project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/html-icon.png" class="icon" title="HTML">
-                    <img src="images/icons/css-icon.png" class="icon" title="CSS">
-                    <img src="images/icons/javascript-icon.png" class="icon" title="Javascript">
-                    <img src="images/icons/jquery-icon.png" class="icon" title="jQuery">
-                    <img src="images/icons/ruby-icon.png" class="icon" title="Ruby">
-                    <img src="images/icons/rails-icon.png" class="icon" title="Ruby on Rails">
-                    <img src="images/icons/photoshop-icon.png" class="icon" title="Adobe Photoshop">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="contract-bridge" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/contract-bridge/contract-bridge.png"/>
-            </div>
-            <div class="expand col-xs-12" id="contract-bridge-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <img src="images/contract-bridge/more.png">
-                <form action="https://github.com/williamyen0203/contract-bridge" class="project-button">
-                  <input type="submit" value="More on Github">
-                </form>
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Contract Bridge</h1>
-                <p>
-                  This is my CSE114 (Object Oriented Programming) final project.
-                  <br><br>
-                  Contract Bridge is played with 4 players and 2 teams with teammates
-                  seated across from each other. Each round, each player plays one
-                  card of the same suit as the leading suit. The player that plays
-                  the highest card of the starting suit leads the next round of cards.
-                  If you do you not have a card matching the leading suit, any other
-                  card may be played. Whenever you play the highest card, you gain
-                  a point. When all cards are played, the team with the highest
-                  total points wins.
-                  <br><br>
-                  This application's GUI was made with JavaFX.
-                </p>
-                <div class="project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/java-icon.png" class="icon" title="Java">
-                    <img src="images/icons/photoshop-icon.png" class="icon" title="Adobe Photoshop">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="website" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/website/website.png"/>
-            </div>
-            <div class="expand col-xs-12" id="website-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <img src="images/website/website.png">
-                <form action="http://williamyen0203.github.io/" class="project-button">
-                  <input type="submit" value="More on Github">
-                </form>
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Personal Website</h1>
-                <p>
-                  You're already here!
-                  <br><br>
-                  This is my personal website created from scratch using HTML, CSS,
-                  Javascript, jQuery, and Twitter Bootstrap for a grid layout. It also
-                  uses jQuery UI for tooltips and features a responsive design
-                  (check out the site on your phone).
-                  <br><br>
-                  More content, projects, and information to come!
-                </p>
-                <div class="project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/html-icon.png" class="icon" title="HTML">
-                    <img src="images/icons/css-icon.png" class="icon" title="CSS">
-                    <img src="images/icons/javascript-icon.png" class="icon" title="Javascript">
-                    <img src="images/icons/jquery-icon.png" class="icon" title="jQuery">
-                    <img src="images/icons/bootstrap-icon.png" class="icon" title="Bootstrap">
-                    <img src="images/icons/photoshop-icon.png" class="icon" title="Adobe Photoshop">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="webpage-maker" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/webpage-maker/webpage-maker.png"/>
-            </div>
-            <div class="expand col-xs-12" id="webpage-maker-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <img src="images/webpage-maker/more.png">
-                <!-- <form action="http://williamyen0203.github.io/" class="project-button">
-                  <input type="submit" value="More on Github">
-                </form> -->
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Webpage Maker</h1>
-                <p>
-                  Webpage Maker provides a user-friendly interface for creating
-                  webpages with buttons to create HTML tags, a CSS editor, and
-                  live updating so that you can see changes as you work.
-                  <br><br>
-                  This application's GUI was made with JavaFX.
-                </p>
-                <div class="project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/java-icon.png" class="icon" title="Java">
-                    <img src="images/icons/html-icon.png" class="icon" title="HTML">
-                    <img src="images/icons/css-icon.png" class="icon" title="CSS">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="pose-maker" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/pose-maker/pose-maker.png"/>
-            </div>
-            <div class="expand col-xs-12" id="pose-maker-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <img src="images/pose-maker/more.png">
-                <!-- <form action="http://williamyen0203.github.io/" class="project-button">
-                  <input type="submit" value="More on Github">
-                </form> -->
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Pose Maker</h1>
-                <p>
-                  Pose Maker is a Java program that allows the user to create
-                  images using simples shapes and intuitive controls.
-                  <br><br>
-                  <h5>Features:</h5>
-                  - Selecting, moving, and removing shapes
-                  <br>
-                  - Changing canvas' background color
-                  <br>
-                  - Changing shape properties, such as fill color, outline color, and outline thickness
-                  <br>
-                  - Saving and loading PoseMaker files
-                  <br>
-                  - Taking and saving snapshots of current image
-                  <br><br>
-                  This application's GUI was made with JavaFX.
-                </p>
-                <div class="project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/java-icon.png" class="icon" title="Java">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="packet-simulation" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/packet-simulation/packet-simulation.png"/>
-            </div>
-            <div class="expand col-xs-12" id="packet-simulation-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <img src="images/packet-simulation/more.png">
-                <form action="http://williamyen0203.github.io/packet-simulation/" class="project-button">
-                  <input type="submit" value="View the simulation">
-                </form>
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Switching Element Packet Simulation</h1>
-                <p>
-                  The Packet Simulation web application simulates a packet switching
-                  element that has a number of inputs that send packets to a number
-                  of outputs. If there are not enough outputs to service all the
-                  incoming packets, packets are dropped. This program runs simulations
-                  of a packet switching element with packets that arrive at 51
-                  different probabilities, from 0% to 100% in steps of 2%.
-                  <br>
-                  The graph takes in a user's input and graphs the number of dropped
-                  packets and the number of busy outputs.
-                  <br><br>
-                  The graph was made use <a href="http://www.chartjs.org/">Chart.js</a>.
-                </p>
-                <div class="project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/html-icon.png" class="icon" title="HTML">
-                    <img src="images/icons/css-icon.png" class="icon" title="CSS">
-                    <img src="images/icons/javascript-icon.png" class="icon" title="Javascript">
-                    <img src="images/icons/jquery-icon.png" class="icon" title="jQuery">
-                    <img src="images/icons/bootstrap-icon.png" class="icon" title="Bootstrap">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="queue-simulation" class="image-container col-xs-6 col-sm-4 col-md-3">
-              <img src="images/queue-simulation/queue-simulation.png"/>
-            </div>
-            <div class="expand col-xs-12" id="queue-simulation-expand">
-              <div class="pointer"></div>
-              <div class="col-xs-12 col-sm-4 col-md-3 project-image">
-                <img src="images/queue-simulation/more.png">
-                <form action="http://williamyen0203.github.io/packet-queue-simulation/" class="project-button">
-                  <input type="submit" value="View the simulation">
-                </form>
-              </div>
-              <div class="col-xs-12 col-sm-8 col-md-9 project-info">
-                <h1 class="project-title">Discrete Time Queue Packet Simulation</h1>
-                <p>
-                  The Packet Queue Simulation web application simulates a queue
-                  with a capacity of 5. Packets arrive and depart with a given
-                  probability. This program runs simulations of a packet queue
-                  with packets that arrive at 51 different probabilities, p, from
-                  0% to 100% in steps of 2%.
-                  <br>
-                  This simulation takes in the user's input and records the
-                  average throughput and average delay at each p value.
-                  <br><br>
-                  The graph was made use <a href="http://www.chartjs.org/">Chart.js</a>.
-                </p>
-                <div class="project-icons">
-                  <div class="well well-sm">
-                    Made with:
-                    <img src="images/icons/html-icon.png" class="icon" title="HTML">
-                    <img src="images/icons/css-icon.png" class="icon" title="CSS">
-                    <img src="images/icons/javascript-icon.png" class="icon" title="Javascript">
-                    <img src="images/icons/jquery-icon.png" class="icon" title="jQuery">
-                    <img src="images/icons/bootstrap-icon.png" class="icon" title="Bootstrap">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="contact col-xs-12" id="scroll-contact">
-          <h1>Contact</h1>
-          <p>The best way to get in contact with me is through
-          <a href="mailto:williamyen0203@gmail.com">email</a>.
-          <br>
-          You can also see other things that I have done on my
-          <a href="https://github.com/williamyen0203">Github</a> or my
-          <a href="https://www.linkedin.com/in/william-yen-45186a100">Linkedin</a>.
-
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <div class="footer footer-bg">
-    <div class="container">
-      <h1>Footer</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-        qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-  </div> -->
+	</div>
 </body>
+
 </html>

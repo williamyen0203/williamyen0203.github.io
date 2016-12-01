@@ -68,19 +68,11 @@
   background: linear-gradient($color1, $color2);
 }
 
-///////////////
-// variables //
-///////////////
-
-$green: rgb(92, 184, 92);
-$blue: rgb(51, 122, 183);
-$red: rgb(217, 83, 79);
-
 //////////////
 // document //
 //////////////
 
-*{
+body {
   font-family: "Droid Sans", "Helvetica-Neue", Helvetica, sans-serif;
 }
 
@@ -88,6 +80,15 @@ $red: rgb(217, 83, 79);
   h1, h2{
     text-align: center;
   }
+}
+
+///////////////
+// bootstrap //
+///////////////
+
+.btn {
+  border-radius: 0;
+
 }
 
 /////////////
@@ -110,7 +111,6 @@ $red: rgb(217, 83, 79);
   height: 200px;
   width: 200px;
   border: 2px white solid;
-  @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5));
 }
 
 .button-container{
@@ -128,7 +128,7 @@ $red: rgb(217, 83, 79);
     margin: 5px;
     border: 1px white solid;
     @include transition(background-color, .2s);
-    @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5));
+    @extend .shadow;
 
     &:hover{
       background-color: rgba(255, 255, 255, .3);
@@ -144,20 +144,8 @@ $red: rgb(217, 83, 79);
 // jQuery UI override //
 ////////////////////////
 
-.ui-tooltip {
-  @include box-shadow(0px, 0px, 10px, 0px, rgba(0, 0, 0, 0.3));
-}
-
-
-.ui-widget-content {
-  border: none;
-}
-
-.ui-corner-all,
-.ui-corner-top,
-.ui-corner-left,
-.ui-corner-tl {
-  border-radius: 0px;
+.tooltip-inner {
+	border-radius: 0;
 }
 
 ////////////////////////
@@ -172,14 +160,8 @@ $red: rgb(217, 83, 79);
 // main //
 //////////
 
-// html, body{
-//   max-width: 100% !important;
-//   overflow-x: hidden !important;
-// }
-
 .main{
   @include box-shadow(0, -20px, 40px, -10px, black);
-  // @include box-shadow(0, 0, 50px, 0, black);
   padding: 25px 0 75px 0;
 }
 
@@ -193,20 +175,13 @@ $red: rgb(217, 83, 79);
   margin: 10px;
   padding: 5px;
   background: white;
-  @include box-shadow(0px, 0px, 10px, 0px, rgba(0, 0, 0, 0.3));
 }
 
 //////////////
 // projects //
 //////////////
 
-.projects-container > div{
-  margin-bottom: 30px;
-}
-
 .image-container img{
-  width: 100%;
-  height: 100%;
   margin: 0;
   border: none;
   @include transition(all, .3s);
@@ -245,59 +220,59 @@ $red: rgb(217, 83, 79);
   @include box-shadow-inset(0px, 0px, 30px, 0px, rgba(0, 0, 0, 0.15));
 }
 
-// .slideshow{
-//   position: relative;
-//
-//   img{
-//     position: absolute;
-//   }
-// }
+///////////
+// modal //
+///////////
 
-.image-container img{
-  width: 100%;
-  height: 100%;
-  @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5));
+.modal-content {
+	border-radius: 0;
 }
 
-.project-image img{
-  width: 100%;
-  height: 100%;
-  @include drop-shadow(3px, 3px, 5px, rgba(0, 0, 0, 0.5));
+.close {
+	opacity: 1;
 }
 
-.project-title{
+/////////////////////
+// generic classes //
+/////////////////////
+
+.shadow {
+  @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.3));
+}
+
+.full-size-image {
+  height: 100%;
+  width: 100%;
+}
+
+.pad-top-none {
   margin-top: 0;
 }
 
-.project-icons{
+.pad-top-light {
+  margin-top: 10px;
+}
+
+.pad-top-med {
+  margin-top: 20px;
+}
+
+.pad-top-heavy {
   margin-top: 30px;
 }
 
-.project-button{
-  margin: 20px 0;
-
-  input{
-    width: 100%;
-    height: 50px;
-    color: white;
-    background-color: $green;
-    border: 1px darken($green, 5%) solid;
-    @include transition(background-color, .2s);
-    @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.5));
-
-    &:hover{
-      background-color: darken($green, 5%);;
-    }
-
-    &:focus{
-      outline: 1px darken($green, 5%) solid;
-    }
-  }
+.pad-bot-none {
+  margin-bottom: 0;
 }
 
-////////////
-// footer //
-////////////
+.pad-bot-light {
+  margin-bottom: 10px;
+}
 
-.footer-bg{
+.pad-bot-med {
+  margin-bottom: 20px;
+}
+
+.pad-bot-heavy {
+  margin-bottom: 30px;
 }
