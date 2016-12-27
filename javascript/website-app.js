@@ -1,10 +1,7 @@
 angular.module('website-app', [])
 
 .controller('website-ctrl', function($scope, $sce) {
-	$scope.modal = {
-		title: "title",
-		body: "body"
-	}
+    $scope.updated = new Date(2016, 11, 27);
 
     $scope.skills = {
         'java': {
@@ -114,7 +111,7 @@ angular.module('website-app', [])
             image: "images/website/website.png",
             imageMore: "images/website/website.png",
             link: "http://williamyen0203.github.io/",
-            description: $sce.trustAsHtml("You're already here! <br> <br> This is my personal website created from scratch using HTML, CSS, Javascript, jQuery, AngularJS, and Twitter Bootstrap for a grid layout. It features a responsive design (check out my site on a mobile device). <br> <br> More content, projects, and information to come!"),
+            description: $sce.trustAsHtml("You're already here! <br> <br> This is my personal website created from scratch using HTML, CSS, Javascript, jQuery, AngularJS, and Twitter Bootstrap for a grid layout. It features a responsive design (check out my site on a mobile device).<br><br>More content, projects, and information to come!"),
             skills: ["html", "css", "javascript", "jquery", "angular", "bootstrap", "photoshop"]
         }, {
             name: "Sam Simulator",
@@ -122,7 +119,7 @@ angular.module('website-app', [])
             image: "images/sam-simulator/sam-simulator.png",
             imageMore: "images/sam-simulator/more.png",
             link: "http://sam-simulator.herokuapp.com/",
-            description: $sce.trustAsHtml("Sam Simulator is a web application built with Ruby on Rails and dedicated to my friend, Sam Chen. This was made to experiment with Ruby, Ruby on Rails, and CSS/jQuery animations. <br> <br> Sam Simulator uses a SQLite database to store foods and values locally but uses a PostgreSQL database when hosted on Heroku. <br> <br> No harm intended."),
+            description: $sce.trustAsHtml("Sam Simulator is a web application built with Ruby on Rails and dedicated to my friend, Sam Chen. This was made to experiment with Ruby, Ruby on Rails, and CSS/jQuery animations.<br><br>Project is hosted on Heroku.<br><br>No harm intended."),
             skills: ["html", "css", "javascript", "jquery", "ruby", "rails", "photoshop"]
         }, {
             name: "Webpage Maker",
@@ -138,7 +135,7 @@ angular.module('website-app', [])
             image: "images/pose-maker/pose-maker.png",
             imageMore: "images/pose-maker/more.png",
             link: null,
-            description: $sce.trustAsHtml("Pose Maker is a Java program that allows the user to create images using simples shapes and intuitive controls. <br> <br> <h5>Features:</h5> - Selecting, moving, and removing shapes <br> - Changing canvas' background color <br> - Changing shape properties, such as fill color, outline color, and outline thickness <br> - Saving and loading PoseMaker files <br> - Taking and saving snapshots of current image <br> <br> This application's GUI was made with JavaFX."),
+            description: $sce.trustAsHtml("Pose Maker is a Java program that allows the user to create images using simples shapes and intuitive controls. <br> <br> <b>Features:</b><br>- Selecting, moving, and removing shapes <br> - Changing canvas' background color <br> - Changing shape properties, such as fill color, outline color, and outline thickness <br> - Saving and loading PoseMaker files <br> - Taking and saving snapshots of current image <br> <br> This application's GUI was made with JavaFX."),
             skills: ["java"]
         }, {
             name: "Packet Simulation",
@@ -189,45 +186,13 @@ angular.module('website-app', [])
             description: $sce.trustAsHtml("More info coming soon."),
             skills: ["c#", "mvc", "html", "css", "javascript"]
         }, {
-            name: "User Instructions",
-            id: "user-instructions",
-            image: "images/cse300/user-instructions.png",
-            imageMore: "images/cse300/user-instructions.png",
-            link: "images/cse300/user-instructions.pdf",
-            description: $sce.trustAsHtml('This is an assignment done for my Technical Writing class, CSE 300.<br><br>Click the View More button to read my set of instructions on brushing your teeth.'),
-            skills: []
-        }, {
-            name: "Literature Review",
-            id: "literature-review",
-            image: "images/cse300/lit-review.png",
-            imageMore: "images/cse300/lit-review.png",
-            link: "images/cse300/lit-review.pdf",
-            description: $sce.trustAsHtml('This is an assignment done for my Technical Writing class, CSE 300.<br><br>Click the View More button to read my literature review on electric cars.'),
-            skills: []
-        }, {
-            name: "Research Proposal",
-            id: "research-proposal",
-            image: "images/cse300/research-proposal.png",
-            imageMore: "images/cse300/research-proposal.png",
-            link: "images/cse300/research-proposal.pdf",
-            description: $sce.trustAsHtml('This is an assignment done for my Technical Writing class, CSE 300.<br><br><br><br>Click the View More button to read my research proposal on electric cars.'),
-            skills: []
-        }, {
-            name: "News Release",
-            id: "news-release",
-            image: "images/cse300/news-release.png",
-            imageMore: "images/cse300/news-release.png",
-            link: "images/cse300/news-release.pdf",
-            description: $sce.trustAsHtml('This is an assignment done for my Technical Writing class, CSE 300.<br><br><br><br>Click the View More button to read my news release of the Surface Studio.'),
-            skills: []
-        }, {
-            name: "",
-            id: "",
-            image: "",
-            imageMore: "",
-            link: "",
-            description: $sce.trustAsHtml(""),
-            skills: ["java"]
+            name: "Puzzle Generator",
+            id: "puzz-gen",
+            image: "images/puzz-gen/puzz-gen.png",
+            imageMore: "images/puzz-gen/more.png",
+            link: "https://williamyen0203.github.io/puzz-gen/",
+            description: $sce.trustAsHtml("Puzzle Generator is a web application created to more easily and quickly generate puzzles for <a href=\"http://www.flipncheck.com/about-1.html\">Flip 'N' Check</a> activity books.<br><br><b>Features</b><br>- Many customizable options<br>- Multiple output file types<br>- Ability to save puzzles<br>- Automatically generate back page of Mad Libs puzzle<br><br><b>JavaScript libraries used:</b><br>- <a href=\"https://github.com/tsayen/dom-to-image\">dom-to-image</a><br>- <a href=\"https://github.com/MrRio/jsPDF\">jsPDF</a>"),
+            skills: ["html", "css", "javascript", "jquery", "angular", "bootstrap"]
         }, {
             name: "",
             id: "",

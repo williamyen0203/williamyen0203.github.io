@@ -4,68 +4,68 @@
 // mixins //
 ////////////
 
-@mixin blur($amt){
-  -webkit-filter: blur($amt);
-  -moz-filter: blur($amt);
-  -o-filter: blur($amt);
-  -ms-filter: blur($amt);
-  filter: blur($amt);
+.blur(@amt){
+  -webkit-filter: blur(@amt);
+  -moz-filter: blur(@amt);
+  -o-filter: blur(@amt);
+  -ms-filter: blur(@amt);
+  filter: blur(@amt);
 }
 
-@mixin transition($property, $time){
-  -webkit-transition: $property $time;
-  -moz-transition: $property $time;
-  -o-transition: $property $time;
-  -ms-transition: $property $time;
-  transition: $property $time;
+.transition(@property, @time){
+  -webkit-transition: @property @time;
+  -moz-transition: @property @time;
+  -o-transition: @property @time;
+  -ms-transition: @property @time;
+  transition: @property @time;
 }
 
-@mixin rotate($deg){
-  -webkit-transform: rotate($deg);
-  -moz-transform: rotate($deg);
-  -o-transform: rotate($deg);
-  -ms-transform: rotate($deg);
-  transform: rotate($deg);
+.rotate(@deg){
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  transform: rotate(@deg);
 }
 
-@mixin scale($factor){
-  -webkit-transform: scale($factor);
-  -moz-transform: scale($factor);
-  -o-transform: scale($factor);
-  -ms-transform: scale($factor);
-  transform: scale($factor);
+.scale(@factor){
+  -webkit-transform: scale(@factor);
+  -moz-transform: scale(@factor);
+  -o-transform: scale(@factor);
+  -ms-transform: scale(@factor);
+  transform: scale(@factor);
 }
 
-@mixin box-shadow($x, $y, $blur, $spread, $color){
-  -webkit-box-shadow: $x $y $blur $spread $color;
-  -moz-box-shadow: $x $y $blur $spread $color;
-  -o-box-shadow: $x $y $blur $spread $color;
-  -ms-box-shadow: $x $y $blur $spread $color;
-  box-shadow: $x $y $blur $spread $color;
+.box-shadow(@x, @y, @blur, @spread, @color){
+  -webkit-box-shadow: @x @y @blur @spread @color;
+  -moz-box-shadow: @x @y @blur @spread @color;
+  -o-box-shadow: @x @y @blur @spread @color;
+  -ms-box-shadow: @x @y @blur @spread @color;
+  box-shadow: @x @y @blur @spread @color;
 }
 
-@mixin box-shadow-inset($inset, $x, $y, $blur, $color){
-  -webkit-box-shadow: inset $inset $x $y $blur $color;
-  -moz-box-shadow: inset $inset $x $y $blur $color;
-  -o-box-shadow: inset $inset $x $y $blur $color;
-  -ms-box-shadow: inset $inset $x $y $blur $color;
-  box-shadow: inset $inset $x $y $blur $color;
+.box-shadow-inset(@inset, @x, @y, @blur, @color){
+  -webkit-box-shadow: inset @inset @x @y @blur @color;
+  -moz-box-shadow: inset @inset @x @y @blur @color;
+  -o-box-shadow: inset @inset @x @y @blur @color;
+  -ms-box-shadow: inset @inset @x @y @blur @color;
+  box-shadow: inset @inset @x @y @blur @color;
 }
 
-@mixin drop-shadow($x, $y, $blur, $color){
-  -webkit-filter: drop-shadow($x $y $blur $color);
-  -moz-filter: drop-shadow($x $y $blur $color);
-  -o-filter: drop-shadow($x $y $blur $color);
-  -ms-filter: drop-shadow($x $y $blur $color);
-  filter: drop-shadow($x $y $blur $color);
+.drop-shadow(@x, @y, @blur, @color){
+  -webkit-filter: drop-shadow(@x @y @blur @color);
+  -moz-filter: drop-shadow(@x @y @blur @color);
+  -o-filter: drop-shadow(@x @y @blur @color);
+  -ms-filter: drop-shadow(@x @y @blur @color);
+  filter: drop-shadow(@x @y @blur @color);
 }
 
-@mixin linear-gradient($color1, $color2){
-  background: -webkit-linear-gradient($color1, $color2);
-  background: -moz-linear-gradient($color1, $color2);
-  background: -o-linear-gradient($color1, $color2);
-  background: -ms-linear-gradient($color1, $color2);
-  background: linear-gradient($color1, $color2);
+.linear-gradient(@color1, @color2){
+  background: -webkit-linear-gradient(@color1, @color2);
+  background: -moz-linear-gradient(@color1, @color2);
+  background: -o-linear-gradient(@color1, @color2);
+  background: -ms-linear-gradient(@color1, @color2);
+  background: linear-gradient(@color1, @color2);
 }
 
 //////////////
@@ -127,8 +127,8 @@ body {
     background-color: rgba(255, 255, 255, .2);
     margin: 5px;
     border: 1px white solid;
-    @include transition(background-color, .2s);
-    @extend .shadow;
+    .transition(background-color, .2s);
+    .shadow;
 
     &:hover{
       background-color: rgba(255, 255, 255, .3);
@@ -161,8 +161,8 @@ body {
 //////////
 
 .main{
-  @include box-shadow(0, -20px, 40px, -10px, black);
-  padding: 25px 0 75px 0;
+  .box-shadow(0, -20px, 40px, -10px, black);
+  padding: 25px 0 10px 0;
 }
 
 ///////////
@@ -184,11 +184,11 @@ body {
 .image-container img{
   margin: 0;
   border: none;
-  @include transition(all, .3s);
+  .transition(all, .3s);
 }
 
 .image-container img:hover{
-  @include scale(1.05);
+  .scale(1.05);
 }
 
 /////////////////////
@@ -201,9 +201,9 @@ body {
   position: absolute;
   background: #fbfbfb;
   opacity: 0;
-  @include rotate(45deg);
+  .rotate(45deg);
   top: 0px;
-  @include box-shadow-inset(30px, 30px, 30px, -30px, rgba(0, 0, 0, 0.15));
+  .box-shadow-inset(30px, 30px, 30px, -30px, rgba(0, 0, 0, 0.15));
   // z-index: -1;
 }
 
@@ -217,7 +217,7 @@ body {
   // left: calc(-50vw + 50%);
   // width: 100vw;
   background: #fbfbfb;
-  @include box-shadow-inset(0px, 0px, 30px, 0px, rgba(0, 0, 0, 0.15));
+  .box-shadow-inset(0px, 0px, 30px, 0px, rgba(0, 0, 0, 0.15));
 }
 
 ///////////
@@ -237,7 +237,7 @@ body {
 /////////////////////
 
 .shadow {
-  @include box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.3));
+  .box-shadow(3px, 3px, 10px, 0px, rgba(0, 0, 0, 0.3));
 }
 
 .full-size-image {

@@ -1,4 +1,4 @@
 # williamyen0203.github.io
-This is my website.
+This is my personal website.
 
 http://williamyen0203.github.io/

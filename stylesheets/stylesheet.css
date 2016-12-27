@@ -1,71 +1,82 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 body {
-  font-family: "Droid Sans", "Helvetica-Neue", Helvetica, sans-serif; }
-
+  font-family: "Droid Sans", "Helvetica-Neue", Helvetica, sans-serif;
+}
 @media only screen and (max-width: 768px) {
-  h1, h2 {
-    text-align: center; } }
+  h1,
+  h2 {
+    text-align: center;
+  }
+}
 .btn {
-  border-radius: 0; }
-
+  border-radius: 0;
+}
 .bg-image {
   background-color: white;
   background-image: url("../images/site/bg blur.jpg");
   background-size: cover;
-  background-position: center; }
-
+  background-position: center;
+}
 .profile {
   color: white;
-  margin: 100px 0 50px 0; }
-
+  margin: 100px 0 50px 0;
+}
 #profile-picture {
   height: 200px;
   width: 200px;
-  border: 2px white solid; }
-
+  border: 2px white solid;
+}
 .button-container {
-  display: inline-table; }
-
+  display: inline-table;
+}
 .profile-button {
-  float: left; }
-  .profile-button input {
-    width: 100px;
-    height: 50px;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.2);
-    margin: 5px;
-    border: 1px white solid;
-    -webkit-transition: background-color 0.2s;
-    -moz-transition: background-color 0.2s;
-    -o-transition: background-color 0.2s;
-    -ms-transition: background-color 0.2s;
-    transition: background-color 0.2s; }
-    .profile-button input:hover {
-      background-color: rgba(255, 255, 255, 0.3); }
-    .profile-button input:focus {
-      outline: 1px white solid; }
-
+  float: left;
+}
+.profile-button input {
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 5px;
+  border: 1px white solid;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.profile-button input:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.profile-button input:focus {
+  outline: 1px white solid;
+}
 .tooltip-inner {
-  border-radius: 0; }
-
+  border-radius: 0;
+}
 .well {
-  border-radius: 0; }
-
+  border-radius: 0;
+}
 .main {
   -webkit-box-shadow: 0 -20px 40px -10px black;
   -moz-box-shadow: 0 -20px 40px -10px black;
   -o-box-shadow: 0 -20px 40px -10px black;
   -ms-box-shadow: 0 -20px 40px -10px black;
   box-shadow: 0 -20px 40px -10px black;
-  padding: 25px 0 75px 0; }
-
+  padding: 25px 0 10px 0;
+}
 .icon {
   height: 40px;
   width: 40px;
   margin: 10px;
   padding: 5px;
-  background: white; }
-
+  background: white;
+}
 .image-container img {
   margin: 0;
   border: none;
@@ -73,15 +84,15 @@ body {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -ms-transition: all 0.3s;
-  transition: all 0.3s; }
-
+  transition: all 0.3s;
+}
 .image-container img:hover {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -o-transform: scale(1.05);
   -ms-transform: scale(1.05);
-  transform: scale(1.05); }
-
+  transform: scale(1.05);
+}
 .pointer {
   height: 25px;
   width: 25px;
@@ -98,11 +109,11 @@ body {
   -moz-box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15);
   -o-box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15);
   -ms-box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15); }
-
+  box-shadow: inset 30px 30px 30px -30px rgba(0, 0, 0, 0.15);
+}
 .expand {
-  display: none; }
-
+  display: none;
+}
 .expand-temp {
   padding: 50px 20px;
   background: #fbfbfb;
@@ -110,47 +121,46 @@ body {
   -moz-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
   -o-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
   -ms-box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15); }
-
+  box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+}
 .modal-content {
-  border-radius: 0; }
-
+  border-radius: 0;
+}
 .close {
-  opacity: 1; }
-
-.shadow, .profile-button input {
+  opacity: 1;
+}
+.shadow {
   -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
   -o-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
   -ms-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3); }
-
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
 .full-size-image {
   height: 100%;
-  width: 100%; }
-
+  width: 100%;
+}
 .pad-top-none {
-  margin-top: 0; }
-
+  margin-top: 0;
+}
 .pad-top-light {
-  margin-top: 10px; }
-
+  margin-top: 10px;
+}
 .pad-top-med {
-  margin-top: 20px; }
-
+  margin-top: 20px;
+}
 .pad-top-heavy {
-  margin-top: 30px; }
-
+  margin-top: 30px;
+}
 .pad-bot-none {
-  margin-bottom: 0; }
-
+  margin-bottom: 0;
+}
 .pad-bot-light {
-  margin-bottom: 10px; }
-
+  margin-bottom: 10px;
+}
 .pad-bot-med {
-  margin-bottom: 20px; }
-
+  margin-bottom: 20px;
+}
 .pad-bot-heavy {
-  margin-bottom: 30px; }
-
-/*# sourceMappingURL=stylesheet.css.map */
+  margin-bottom: 30px;
+}
