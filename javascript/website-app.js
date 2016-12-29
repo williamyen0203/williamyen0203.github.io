@@ -1,7 +1,7 @@
 angular.module('website-app', [])
 
 .controller('website-ctrl', function($scope, $sce) {
-    $scope.updated = new Date(2016, 11, 27);
+    $scope.updated = new Date(2016, 11, 28);
 
     $scope.skills = {
         'java': {
