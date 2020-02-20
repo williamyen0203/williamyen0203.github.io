@@ -15,8 +15,8 @@ export default function LampHeadJoint({ yMotion, xMotion, length }: LampHeadJoin
   // Angle
   useEffect(() =>
     yMotion.onChange(() => {
-      var y = yMotion.get();
-      var angle = Math.atan(y / length) * (180 / Math.PI);;
+      const y = yMotion.get();
+      const angle = Math.atan(y / length) * (180 / Math.PI);;
 
       setAngle(angle);
     }),
@@ -26,7 +26,7 @@ export default function LampHeadJoint({ yMotion, xMotion, length }: LampHeadJoin
   // Horizontal movement
   useEffect(() =>
     xMotion.onChange(() => {
-      var xPos = xMotion.get();
+      const xPos = xMotion.get();
 
       setXPos(-xPos);
     }),

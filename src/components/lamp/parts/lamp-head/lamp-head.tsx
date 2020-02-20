@@ -6,19 +6,33 @@ import './lamp-head.css'
 type LampHeadProps = {
   yMotion: MotionValue;
   xMotion: MotionValue;
+  length: number;
   lampSize: number;
 }
 
-export default function LampHead({ yMotion, xMotion, lampSize }: LampHeadProps) {
+export default function LampHead({ yMotion, xMotion, length, lampSize }: LampHeadProps) {
   const [xPos, setXPos] = useState(0);
+  const [angle, setAngle] = useState(0);
 
   useEffect(() =>
     xMotion.onChange(() => {
-      var xPos = xMotion.get();
+      const x = xMotion.get();
 
-      setXPos(-xPos);
+      setXPos(-x);
     }),
     [xMotion]
+  );
+
+  useEffect(() =>
+    yMotion.onChange(() => {
+      const RAD = 180 / Math.PI
+
+      const y = yMotion.get();
+      const angle = -Math.atan(y / length) * RAD
+
+      setAngle(angle);
+    }),
+    [yMotion]
   );
 
   return (
@@ -37,6 +51,7 @@ export default function LampHead({ yMotion, xMotion, lampSize }: LampHeadProps) 
         height: lampSize,
         top: -lampSize / 2,
         left: -lampSize / 2 - xPos,
+        rotate: `${angle}deg`,
         y: yMotion
       }}
     />

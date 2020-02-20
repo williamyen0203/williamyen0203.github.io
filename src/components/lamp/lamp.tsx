@@ -25,6 +25,7 @@ export default function Lamp() {
       <LampHead
         yMotion={headYMotion}
         xMotion={jointXMotion}
+        length={INITIAL_JOINT_LENGTH}
         lampSize={LAMP_HEAD_SQUARE_DIMENSION}
       />
       <LampHeadJoint
