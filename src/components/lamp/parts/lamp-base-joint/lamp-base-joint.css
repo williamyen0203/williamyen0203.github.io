@@ -1,0 +1,18 @@
+.lamp-base-joint {
+  position: absolute;
+  z-index: 0;
+
+  background-color: grey;
+
+  height: 10px;
+
+  transform-origin: left;
+}
+
+.joint-handle {
+  position: absolute;
+  z-index: 1;
+
+  background-color: black;
+  border-radius: 100%;
+}

@@ -1,8 +1,8 @@
-.lamp-joint {
-  background-color: grey;
-  z-index: 0;
-  
+.lamp-head-joint {
   position: absolute;
+  z-index: 0;
+  background-color: grey;
+  
   top: 0;
   left: 0;
 
