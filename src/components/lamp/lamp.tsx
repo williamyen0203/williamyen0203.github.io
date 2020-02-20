@@ -1,22 +1,19 @@
 import React from "react";
-import {useMotionValue } from "framer-motion"
+import { useMotionValue } from "framer-motion"
 import './lamp.css'
 import LampHead from './parts/lamp-head/lamp-head'
-import LampJoint from './parts/lamp-joint/lamp-joint'
+import LampHeadJoint from './parts/lamp-head-joint/lamp-head-joint'
 
 export default function Lamp() {
-  const xMotion = useMotionValue(0);
-  const yMotion = useMotionValue(0);
+  const headYMotion = useMotionValue(0);
 
   return (
     <div className="lamp-container">
       <LampHead
-        xMotion={xMotion}
-        yMotion={yMotion}
+        yMotion={headYMotion}
       />
-      <LampJoint
-        xMotion={xMotion}
-        yMotion={yMotion}
+      <LampHeadJoint
+        yMotion={headYMotion}
       />
     </div>
   )

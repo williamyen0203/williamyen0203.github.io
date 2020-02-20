@@ -4,24 +4,26 @@ import lamp_svg from './lamp-head.svg'
 import './lamp-head.css'
 
 type LampHeadProps = {
-  xMotion: MotionValue;
   yMotion: MotionValue;
 }
 
-export default function LampHead({ xMotion, yMotion }: LampHeadProps) {
+export default function LampHead({
+  yMotion
+}: LampHeadProps) {
   return (
     <motion.img
       src={lamp_svg}
       className="lamp-head"
-      drag
+      drag="y"
       dragConstraints={{
         top: -50,
         left: -50,
         right: 50,
         bottom: 50,
       }}
+      dragElastic={0.2}
+      dragMomentum={false}
       style={{
-        x: xMotion,
         y: yMotion
       }}
     />

@@ -1,0 +1,12 @@
+.lamp-joint {
+  background-color: grey;
+  z-index: 0;
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 10px;
+
+  transform-origin: right;
+}
