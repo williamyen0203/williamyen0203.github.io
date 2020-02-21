@@ -7,12 +7,12 @@ import LampBaseJoint from './parts/lamp-base-joint/lamp-base-joint'
 
 
 const INITIAL_JOINT_LENGTH = 300;
-const LAMP_HEAD_SQUARE_DIMENSION = 200;
+const LAMP_HEAD_SQUARE_DIMENSION = 150;
 const HANDLE_DIMENSION = 25;
 
 export default function Lamp() {
+  const headXMotion = useMotionValue(0);
   const headYMotion = useMotionValue(0);
-  const jointXMotion = useMotionValue(0);
 
   return (
     <div
@@ -23,18 +23,18 @@ export default function Lamp() {
       }}
     >
       <LampHead
+        xMotion={headXMotion}
         yMotion={headYMotion}
-        xMotion={jointXMotion}
         length={INITIAL_JOINT_LENGTH}
         lampSize={LAMP_HEAD_SQUARE_DIMENSION}
       />
       <LampHeadJoint
+        xMotion={headXMotion}
         yMotion={headYMotion}
-        xMotion={jointXMotion}
         length={INITIAL_JOINT_LENGTH}
       />
       <LampBaseJoint
-        xMotion={jointXMotion}
+        xMotion={headXMotion}
         length={INITIAL_JOINT_LENGTH}
         handleSize={HANDLE_DIMENSION}
       />

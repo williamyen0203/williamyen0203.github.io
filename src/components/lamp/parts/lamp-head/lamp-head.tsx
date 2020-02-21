@@ -4,24 +4,14 @@ import lamp_svg from './lamp-head.svg'
 import './lamp-head.css'
 
 type LampHeadProps = {
-  yMotion: MotionValue;
   xMotion: MotionValue;
+  yMotion: MotionValue;
   length: number;
   lampSize: number;
 }
 
-export default function LampHead({ yMotion, xMotion, length, lampSize }: LampHeadProps) {
-  const [xPos, setXPos] = useState(0);
+export default function LampHead({ xMotion, yMotion, length, lampSize }: LampHeadProps) {
   const [angle, setAngle] = useState(0);
-
-  useEffect(() =>
-    xMotion.onChange(() => {
-      const x = xMotion.get();
-
-      setXPos(-x);
-    }),
-    [xMotion]
-  );
 
   useEffect(() =>
     yMotion.onChange(() => {
@@ -32,17 +22,19 @@ export default function LampHead({ yMotion, xMotion, length, lampSize }: LampHea
 
       setAngle(angle);
     }),
-    [yMotion]
+    [yMotion, length]
   );
 
   return (
     <motion.img
       src={lamp_svg}
       className="lamp-head"
-      drag="y"
+      drag
       dragConstraints={{
         top: -100,
         bottom: 100,
+        left: -100,
+        right: 100
       }}
       dragElastic={0.2}
       dragMomentum={false}
@@ -50,8 +42,9 @@ export default function LampHead({ yMotion, xMotion, length, lampSize }: LampHea
         width: lampSize,
         height: lampSize,
         top: -lampSize / 2,
-        left: -lampSize / 2 - xPos,
+        left: -lampSize / 2,
         rotate: `${angle}deg`,
+        x: xMotion,
         y: yMotion
       }}
     />

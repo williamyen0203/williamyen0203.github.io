@@ -23,8 +23,6 @@ export default function LampBaseJoint({ xMotion, length, handleSize }: LampBaseJ
       // [0, 180]
       const angle = (atan > 0) ? atan : atan - 180;
       setAngle(angle);
-      console.log("atan: " + atan);
-      console.log("angle: " + angle);
 
       const normalizedAngle = 90 - Math.abs(atan)
       const adjustedLength = length / Math.cos(normalizedAngle / rad);

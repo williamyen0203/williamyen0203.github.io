@@ -3,16 +3,15 @@ import { motion, MotionValue } from "framer-motion";
 import './lamp-head-joint.css'
 
 type LampHeadJointProps = {
-  yMotion: MotionValue;
   xMotion: MotionValue;
+  yMotion: MotionValue;
   length: number;
 }
 
-export default function LampHeadJoint({ yMotion, xMotion, length }: LampHeadJointProps) {
+export default function LampHeadJoint({ xMotion, yMotion, length }: LampHeadJointProps) {
   const [angle, setAngle] = useState(0);
   const [xPos, setXPos] = useState(0);
 
-  // Angle
   useEffect(() =>
     yMotion.onChange(() => {
       const y = yMotion.get();
@@ -23,7 +22,6 @@ export default function LampHeadJoint({ yMotion, xMotion, length }: LampHeadJoin
     [yMotion, length]
   );
 
-  // Horizontal movement
   useEffect(() =>
     xMotion.onChange(() => {
       const xPos = xMotion.get();
