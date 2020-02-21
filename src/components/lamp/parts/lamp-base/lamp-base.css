@@ -1,0 +1,9 @@
+.lamp-base {
+  position: absolute;
+  z-index: 1;
+
+  height: 25px;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  background-color: darkgrey;
+}
