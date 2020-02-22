@@ -1,0 +1,13 @@
+.monitor-container {
+  position: relative;
+}
+
+.monitor {
+  position: absolute;
+  z-index: 1;
+}
+
+.monitor-stand {
+  position: absolute;
+  z-index: 0;
+}
