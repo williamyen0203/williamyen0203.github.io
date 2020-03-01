@@ -3,6 +3,7 @@ import './App.css';
 import Lamp from './components/lamp/lamp';
 import Mouse from './components/mouse/mouse';
 import Monitor from './components/monitor/monitor';
+import Vase from './components/plant/vase/vase';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Lamp />
       <Mouse />
       <Monitor />
+      <Vase />
     </div>
   );
 }

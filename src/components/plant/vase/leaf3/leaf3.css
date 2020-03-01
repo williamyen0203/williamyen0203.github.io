@@ -1,0 +1,6 @@
+.leaf3 {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  transform-origin: bottom left;
+}

@@ -1,0 +1,6 @@
+.leaf1 {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  transform-origin: bottom right;
+}

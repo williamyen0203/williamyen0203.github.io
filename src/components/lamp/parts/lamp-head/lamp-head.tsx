@@ -36,7 +36,7 @@ export default function LampHead({ xMotion, yMotion, length, lampSize }: LampHea
         left: -100,
         right: 100
       }}
-      dragElastic={0.2}
+      dragElastic={0.05}
       dragMomentum={false}
       style={{
         width: lampSize,

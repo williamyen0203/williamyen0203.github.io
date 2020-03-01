@@ -54,7 +54,7 @@ export default function Monitor() {
             left: -0.5,
             right: 0.5
           }}
-          dragElastic={0.05}
+          dragElastic={0.005}
           dragMomentum={false}
           style={{
             height: MONITOR_HEIGHT,
