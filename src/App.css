@@ -1,5 +1,12 @@
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -37,7 +44,22 @@
   }
 }
 
-.container {
-  margin-left: 400px;
-  margin-top: 400px;
+.lamp-component {
+  right: 20%;
+  top: 50%;
+}
+
+.mouse-component {
+  right: 30%;
+  bottom: 5%;
+}
+
+.vase-component {
+  bottom: 5%;
+  left: 10%;
+}
+
+.monitor-component {
+  left: calc(50% - 400px);
+  top: 15%;
 }

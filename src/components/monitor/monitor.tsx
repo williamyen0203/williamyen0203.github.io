@@ -4,13 +4,17 @@ import monitor_stand_svg from './monitor-stand.svg';
 import './monitor.css';
 import monitor_svg from './monitor.svg';
 
+type MonitorProps = {
+  className: string;
+}
+
 const MONITOR_WIDTH = 800;
 const MONITOR_HEIGHT = MONITOR_WIDTH * (1080 / 1920);
 const MONITOR_STAND_DIMENSION = 300
 const PERSPECTIVE_TIGHTNESS = 30;
 const PERSPECTIVE_DISTANCE = 250;
 
-export default function Monitor() {
+export default function Monitor({ className }: MonitorProps) {
   const xMotion = useMotionValue(0);
   const yMotion = useMotionValue(0);
 
@@ -21,8 +25,6 @@ export default function Monitor() {
     xMotion.onChange(() => {
       const x = xMotion.get();
       const tilt = clamp(x / PERSPECTIVE_TIGHTNESS, -1, 1);
-
-      console.log(tilt);
       
       setTiltX(tilt);
     }),
@@ -40,7 +42,7 @@ export default function Monitor() {
   );
 
   return (
-    <div className="monitor-container">
+    <div className={`monitor-container ${className}`}>
       <div
         className="monitor"
         style={{perspective: PERSPECTIVE_DISTANCE}}

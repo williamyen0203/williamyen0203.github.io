@@ -1,4 +1,4 @@
-import { motion, useMotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useRef } from "react";
 import './vase.css';
 import vase_svg from './vase.svg';
@@ -6,9 +6,13 @@ import LeafOne from './leaf1/leaf1';
 import LeafTwo from './leaf2/leaf2';
 import LeafThree from './leaf3/leaf3';
 
+type VaseProps = {
+  className: string
+}
+
 const VASE_DIMENSION = 200;
 
-export default function Vase() {
+export default function Vase({ className }: VaseProps) {
   const leaf1Ref: any = useRef<typeof LeafOne>(null);
   const leaf2Ref: any = useRef<typeof LeafOne>(null);
   const leaf3Ref: any = useRef<typeof LeafOne>(null);
@@ -23,7 +27,7 @@ export default function Vase() {
   return (
     <motion.div
       onTap={wiggleLeaves}
-      className="vase-container">
+      className={`vase-container ${className}`}>
         <motion.img
         src={vase_svg}
         className="vase"

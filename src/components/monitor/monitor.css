@@ -1,5 +1,6 @@
 .monitor-container {
-  position: relative;
+  position: absolute;
+  z-index: -1
 }
 
 .monitor {

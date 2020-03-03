@@ -1,4 +1,4 @@
-import { motion, useMotionValue, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import React, { forwardRef, useImperativeHandle } from "react";
 import leaf1_svg from './leaf1.svg';
 import './leaf1.css';

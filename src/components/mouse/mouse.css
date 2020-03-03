@@ -1,3 +1,4 @@
 .mouse {
+  position: absolute;
   background-color: grey;
 }

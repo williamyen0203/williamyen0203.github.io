@@ -6,19 +6,22 @@ import LampBase from './parts/lamp-base/lamp-base';
 import LampHeadJoint from './parts/lamp-head-joint/lamp-head-joint';
 import LampHead from './parts/lamp-head/lamp-head';
 
+type LampProps = {
+  className: string;
+}
 
 const INITIAL_JOINT_LENGTH = 300;
 const LAMP_HEAD_SQUARE_DIMENSION = 150;
 const HANDLE_DIMENSION = 25;
 const BASE_LENGTH = 200;
 
-export default function Lamp() {
+export default function Lamp({ className }: LampProps) {
   const headXMotion = useMotionValue(0);
   const headYMotion = useMotionValue(0);
 
   return (
     <div
-      className="lamp-container"
+      className={`lamp-container ${className}`}
       style={{
         height: INITIAL_JOINT_LENGTH,
         width: INITIAL_JOINT_LENGTH

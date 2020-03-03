@@ -2,9 +2,13 @@ import { motion } from "framer-motion";
 import React from "react";
 import './mouse.css';
 
+type MouseProps = {
+  className: string;
+}
+
 const MOUSE_DIMENSION = 100;
 
-export default function Mouse() {
+export default function Mouse({ className }: MouseProps) {
   return (
     <motion.div
       drag
@@ -16,7 +20,7 @@ export default function Mouse() {
       }}
       dragElastic={0.2}
       dragMomentum={false}
-      className="mouse"
+      className={`mouse ${className}`}
       style={{
         height: MOUSE_DIMENSION,
         width: MOUSE_DIMENSION

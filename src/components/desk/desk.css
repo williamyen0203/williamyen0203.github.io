@@ -1,0 +1,5 @@
+.desk {
+  background-color: lightgrey;
+  position: absolute;
+  z-index: -10;
+}
